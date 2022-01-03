@@ -71,6 +71,62 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-hexo部署到github的一些问题与解决" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/01/03/hexo%E9%83%A8%E7%BD%B2%E5%88%B0github%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98%E4%B8%8E%E8%A7%A3%E5%86%B3/" class="article-date">
+  <time class="dt-published" datetime="2022-01-03T09:20:49.000Z" itemprop="datePublished">2022-01-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/01/03/hexo%E9%83%A8%E7%BD%B2%E5%88%B0github%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98%E4%B8%8E%E8%A7%A3%E5%86%B3/">hexo部署到github的一些问题与解决</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h4 id="1-新建的GitHub仓库名，必须按以下格式："><a href="#1-新建的GitHub仓库名，必须按以下格式：" class="headerlink" title="1. 新建的GitHub仓库名，必须按以下格式："></a>1. 新建的GitHub仓库名，必须按以下格式：</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">固定格式：username.github.io  # 比如，我的 ArchiLanter.github.io</span><br><span class="line"></span><br><span class="line"># 注1：必须是同名，并且加上后面的 github.io</span><br><span class="line"># 注2：该仓库名就是最后你的博客访问域名，所以大小写不要紧，但必须&quot;同名&quot;。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</br>
+
+<h4 id="2-编辑-config-yml时，要注意"><a href="#2-编辑-config-yml时，要注意" class="headerlink" title="2. 编辑_config.yml时，要注意"></a>2. 编辑_config.yml时，要注意</h4><p>要注意：Win10系统，应该用仓库的SSH地址，如下面这样</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">git@github.com:ArchiLantern/ArchiLantern.github.io.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>注：<br>Mac等系统，可能用https的仓库地址就可以了。<br>若不行，可以<a target="_blank" rel="noopener" href="http://www.manongjc.com/detail/24-bcljrkaiyjbtizm.html">参考这篇文章</a>的几种方式。<br></br></p>
+<h4 id="3-hexo-deploy-简写-hexo-d-时"><a href="#3-hexo-deploy-简写-hexo-d-时" class="headerlink" title="3. hexo deploy (简写 hexo d) 时"></a>3. hexo deploy (简写 hexo d) 时</h4><ul>
+<li>注意输入 正确的用户名和密码</li>
+</ul>
+</br>
+
+<h4 id="4-部署成功后，访问https-你的username-github-io"><a href="#4-部署成功后，访问https-你的username-github-io" class="headerlink" title="4. 部署成功后，访问https://你的username.github.io/"></a>4. 部署成功后，访问https://你的username.github.io/</h4><ul>
+<li>这是你可能发现，博客还没能正常启动（旧版GitHub可能可以了）</li>
+<li>新版GitHub，还要求你要选择一个”页面主题”。根据页面提示，点击根据它的”<a target="_blank" rel="noopener" href="https://docs.github.com/en/pages">read the full documentation</a>“中的说明 <a target="_blank" rel="noopener" href="https://docs.github.com/en/pages/quickstart">QuickStart for Github Pages</a>，进行相关操作即可。<ul>
+<li>如 该博客仓库的 Settings -&gt; Pages -&gt; Choose a theme</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/01/03/hexo%E9%83%A8%E7%BD%B2%E5%88%B0github%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98%E4%B8%8E%E8%A7%A3%E5%86%B3/" data-id="ckxyhz1k80000sonjc4rffdun" data-title="hexo部署到github的一些问题与解决" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-我的Markdown语法教程" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/01/03/%E6%88%91%E7%9A%84Markdown%E8%AF%AD%E6%B3%95%E6%95%99%E7%A8%8B/" class="article-date">
@@ -373,7 +429,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/01/03/%E6%88%91%E7%9A%84Markdown%E8%AF%AD%E6%B3%95%E6%95%99%E7%A8%8B/" data-id="ckxyf8fvr0000dwnjf5kb3lz6" data-title="我的Markdown语法教程" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/01/03/%E6%88%91%E7%9A%84Markdown%E8%AF%AD%E6%B3%95%E6%95%99%E7%A8%8B/" data-id="ckxyhz1kc0001sonjdnj4e9ij" data-title="我的Markdown语法教程" class="article-share-link">Share</a>
       
       
       
@@ -416,7 +472,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/01/03/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" data-id="ckxyf8fvx0002dwnjb2az1b0a" data-title="我的第一篇博客文章" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/01/03/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" data-id="ckxyhz1kj0003sonjdjkrbxzl" data-title="我的第一篇博客文章" class="article-share-link">Share</a>
       
       
       
@@ -467,7 +523,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/01/03/hello-world/" data-id="ckxyf8fvw0001dwnjd8vv148r" data-title="Hello World" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/01/03/hello-world/" data-id="ckxyhz1ke0002sonj051f4qim" data-title="Hello World" class="article-share-link">Share</a>
       
       
       
@@ -508,6 +564,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2022/01/03/hexo%E9%83%A8%E7%BD%B2%E5%88%B0github%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98%E4%B8%8E%E8%A7%A3%E5%86%B3/">hexo部署到github的一些问题与解决</a>
+          </li>
         
           <li>
             <a href="/2022/01/03/%E6%88%91%E7%9A%84Markdown%E8%AF%AD%E6%B3%95%E6%95%99%E7%A8%8B/">我的Markdown语法教程</a>
