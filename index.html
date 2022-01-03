@@ -93,12 +93,29 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h4 id="1-新建的GitHub仓库名，必须按以下格式："><a href="#1-新建的GitHub仓库名，必须按以下格式：" class="headerlink" title="1. 新建的GitHub仓库名，必须按以下格式："></a>1. 新建的GitHub仓库名，必须按以下格式：</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">固定格式：username.github.io  # 比如，我的 ArchiLanter.github.io</span><br><span class="line"></span><br><span class="line"># 注1：必须是同名，并且加上后面的 github.io</span><br><span class="line"># 注2：该仓库名就是最后你的博客访问域名，所以大小写不要紧，但必须&quot;同名&quot;。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+        <h4 id="0-关于”部署”的官方说明"><a href="#0-关于”部署”的官方说明" class="headerlink" title="0. 关于”部署”的官方说明"></a>0. 关于”部署”的官方说明</h4><ul>
+<li><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/one-command-deployment.html#Git">hexo部署到GitHub上的官方说明（中文）</a><br><a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">英文说明</a></li>
+<li>步骤要点：<ul>
+<li>安装 npm install hexo-deployer-git –save</li>
+<li>编辑 _config.yml</li>
+<li>部署 hexo clean &amp;&amp; hexo deploy</li>
+</ul>
+</li>
+<li>注意事项：<ul>
+<li>这一切是如何发生的？<br>当执行 hexo deploy 时，Hexo会 将 public目录中的文件和目录<br>推送至 _config.yml 中指定的 远端仓库和分支中，并且完全覆盖该分支下（默认为master）的已有内容。</li>
+<li>hexo默认使用master分支（请确认你的仓库默认分支是否为master）。若需要改为其他分支，需要在_config.yml的deploy参数选项下进行指定。</br>
+#### 1. 新建的GitHub仓库名，必须按以下格式：</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">固定格式：username.github.io  # 比如，我的 ArchiLanter.github.io</span><br><span class="line"></span><br><span class="line"># 注1：必须是同名，并且加上后面的 github.io</span><br><span class="line"># 注2：该仓库名就是最后你的博客访问域名，所以大小写不要紧，但必须&quot;同名&quot;。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 </br>
 
 <h4 id="2-编辑-config-yml时，要注意"><a href="#2-编辑-config-yml时，要注意" class="headerlink" title="2. 编辑_config.yml时，要注意"></a>2. 编辑_config.yml时，要注意</h4><p>要注意：Win10系统，应该用仓库的SSH地址，如下面这样</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">git@github.com:ArchiLantern/ArchiLantern.github.io.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>注：<br>Mac等系统，可能用https的仓库地址就可以了。<br>若不行，可以<a target="_blank" rel="noopener" href="http://www.manongjc.com/detail/24-bcljrkaiyjbtizm.html">参考这篇文章</a>的几种方式。<br></br></p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">git@github.com:ArchiLantern/ArchiLantern.github.io.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span>  <span class="comment">#默认即master；请按需指定。</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>注：<br>Mac等系统，可能用https的仓库地址就可以了。<br>若不行，可以<a target="_blank" rel="noopener" href="http://www.manongjc.com/detail/24-bcljrkaiyjbtizm.html">参考这篇文章</a>的几种方式。</p>
+</br>
+
 <h4 id="3-hexo-deploy-简写-hexo-d-时"><a href="#3-hexo-deploy-简写-hexo-d-时" class="headerlink" title="3. hexo deploy (简写 hexo d) 时"></a>3. hexo deploy (简写 hexo d) 时</h4><ul>
 <li>注意输入 正确的用户名和密码</li>
 </ul>
@@ -110,6 +127,14 @@
 <li>如 该博客仓库的 Settings -&gt; Pages -&gt; Choose a theme</li>
 </ul>
 </li>
+</ul>
+</br>
+
+<h4 id="5-更新博客和部署到远端仓库，需要稍等1分钟，再刷新"><a href="#5-更新博客和部署到远端仓库，需要稍等1分钟，再刷新" class="headerlink" title="5. 更新博客和部署到远端仓库，需要稍等1分钟，再刷新"></a>5. 更新博客和部署到远端仓库，需要稍等1分钟，再刷新</h4><ul>
+<li>如，你在本地新建一篇博文，即 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo -n &quot;xxx新博文&quot;</span><br></pre></td></tr></table></figure></li>
+<li>然后，你修改满意后，可以用下面一条命令生成和部署到GitHub <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy -g</span><br><span class="line"><span class="meta">#</span><span class="bash"> 或者</span></span><br><span class="line">hexo generate -d</span><br></pre></td></tr></table></figure>
+ 这样仓库就会有更新了。博客则要稍等一下。 </br></li>
+<li>最后，稍等一分钟，刷新或访问你的 博客地址即可。</li>
 </ul>
 
       
